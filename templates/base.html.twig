@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Book-Search{% endblock %}</title>
+        {% block stylesheets %}<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet"/>{% endblock %}
+    </head>
+    <body>
+        <div id="overlay">
+          <div id="modal">
+            <div id="modal-header"><h2 id="book-header">Hello world</h2><a href="#" id="close-modal" onClick="javascript:closeModal();">X</a><div style="clear:both;"></div></div>
+            <div id="modal-body">
+              <div id="modal-book-image"></div>
+              <div class="p1">
+                <h4>Kuvaus</h4>
+                <p id="modal-book-description"></p>
+              </div>
+              <div style="clear:both;"></div>
+              <div class="modal-left">
+                <h4>Kirjan esikatselu</h4>
+                <p id="modal-book-snippet"></p>
+                <div style="clear:both;"></div>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div style="clear:both;"></div>
+          </div>
+        </div>
+        <div id="content">
+          {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/modal.js" type="text/javascript"></script>
+        <script src="js/search-table.js" type="text/javascript"></script>
+        {% endblock %}
+    </body>
+</html>

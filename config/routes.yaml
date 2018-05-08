@@ -1,0 +1,14 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+frontpage:
+  path: /
+  controller: App\Controller\UiController::FrontPage
+
+book_list:
+  path: /books/{qrySearch}
+  controller: App\Controller\BookController::ListBooks
+
+book_one:
+  path: /book/{id}
+  controller: App\Controller\BookController::OneBook
